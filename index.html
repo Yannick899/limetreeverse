@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DAO - Musiker & Instrumente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background: #ececec;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Stil für NFT-Karten-Gitter */
+        .nft-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .nft-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .nft-card:hover {
+            transform: scale(1.02);
+        }
+
+        .nft-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .nft-card-content {
+            padding: 15px;
+        }
+
+        .nft-tier {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .nft-relationship {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .nft-description {
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        /* Farbzuordnungen für die Tier-Kategorien */
+        .tier-green { 
+            background: #d8f3dc; 
+            border-bottom: 2px solid #95d5b2; 
+        }
+        .tier-blue { 
+            background: #dbeafe; 
+            border-bottom: 2px solid #93c5fd; 
+        }
+        .tier-gold { 
+            background: #fff7cd; 
+            border-bottom: 2px solid #ffe669;
+        }
+        .tier-rainbow { 
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); 
+            color: #fff; 
+            border-bottom: 2px solid #ffffff;
+        }
+
+        /* Ausklappbarer Text unterhalb der Karte */
+        .hidden-text {
+            display: none;
+            padding: 15px;
+            font-size: 0.9em;
+            background: #fafafa;
+            border-top: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        /* Klickbarer Titel */
+        .clickable-title {
+            color: #007acc;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .clickable-title:hover {
+            color: #005b99;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DAO - Musiker & Instrumente</h1>
+    </header>
+
+    <div class="content">
+        <h2>Philosophie und Idee</h2>
+        <p class="highlight">
+            Im Mittelpunkt steht die einzigartige Beziehung zwischen Musiker und Instrument. Das NFT bildet genau diese Verbindung ab – es ist weder rein ontologisch (der Klang des Instruments) noch rein phänomenologisch (das bewusste Erleben des Musikers), sondern eine Verschmelzung beider Ebenen. Mit dem Erwerb dieses NFTs erhält der Käufer exklusiven, digitalen Zugang zu dieser besonderen Symbiose. Neben dem charakteristischen Klang des Instruments, gespielt vom Musiker, gehören auch persönliches, musikalisches Zusatzmaterial – etwa ein Lieblingssong oder eine bedeutende Komposition – zu den Inhalten.
+        </p>
+
+        <h3>Die NFTs</h3>
+        <ul>
+            <li>Tier 1: Hobbymusiker (Grün)</li>
+            <li>Tier 2: Professionelle Musiker (Blau)</li>
+            <li>Tier 3: Bekannte Musiker (Gold)</li>
+            <li>Superstars (Regenbogenfarben)</li>
+        </ul>
+
+        <h3>Beziehung zum Instrument</h3>
+        <ul>
+            <li>Mittel zum Zweck (Grau)</li>
+            <li>Haustier (Orange)</li>
+            <li>Bester Freund (Blau)</li>
+            <li>Lebenspartner (Rot)</li>
+        </ul>
+
+        <h3 class="clickable-title" id="funktionen">Funktionen der NFTs</h3>
+        <p>
+            Jedes NFT dient als Schlüssel zu exklusiven Inhalten wie Audiodateien, Videos oder Interviews. Die Inhalte können im Laufe der Zeit erweitert werden, sodass NFT-Inhaber langfristig Zugang zu neuen Materialien erhalten.
+        </p>
+        
+        <h3>Ziele und Community</h3>
+        <p>
+            Das DAO unterstützt musikalische Bildungsprojekte, fördert die Vielfalt durch seltene Sprachen und lädt die Community ein, sich aktiv am Sammeln und Handeln der NFTs zu beteiligen.
+        </p>
+        
+        <h3>Technische Umsetzung</h3>
+        <p>
+            Die Realisierung erfolgt auf der Cardano-Blockchain, unter Verwendung von Smart Contracts und dezentraler Speicherung (IPFS). Die Bedienoberfläche ermöglicht eine einfache Interaktion, sodass auch Einsteiger problemlos teilnehmen können.
+        </p>
+
+        <h3>Beispiel für NFT-Sammelkarten</h3>
+        <p>Klicken Sie auf eine Karte, um zusätzliche Informationen zur Beziehung zwischen Musiker, Instrument und dem exklusiven Zugang zu erhalten.</p>
+
+        <div class="nft-grid">
+            <div class="nft-card" data-target="text1">
+                <div class="tier-green">
+                    <img src="image1.png" alt="Gitarre (Hobbymusiker)">
+                </div>
+                <div class="nft-card-content">
+                    <div class="nft-tier">Hobbymusiker (Grün)</div>
+                    <div class="nft-relationship">Beziehung: Mittel zum Zweck (Grau)</div>
+                    <p class="nft-description">Der Hobbymusiker nutzt sein Instrument vor allem, um vom Alltag abzuschalten und gelegentlich neue Klänge zu entdecken.</p>
+                </div>
+                <div class="hidden-text" id="text1">
+                    Durch das Anklicken dieses NFTs erhalten Sie Einblicke in einfache, entspannte Kompositionen, die der Musiker zu Hause aufnimmt.
+                </div>
+            </div>
+
+            <div class="nft-card" data-target="text2">
+                <div class="tier-blue">
+                    <img src="image2.png" alt="Violine (Professioneller Musiker)">
+                </div>
+                <div class="nft-card-content">
+                    <div class="nft-tier">Professionelle Musiker (Blau)</div>
+                    <div class="nft-relationship">Beziehung: Haustier (Orange)</div>
+                    <p class="nft-description">Der professionelle Musiker pflegt sein Instrument mit Sorgfalt und täglicher Routine – fast wie ein geliebtes Haustier.</p>
+                </div>
+                <div class="hidden-text" id="text2">
+                    Ein Klick auf dieses NFT schaltet Studioaufnahmen und detaillierte Probesessions frei, die zeigen, wie intensiv der Musiker mit seinem Instrument arbeitet.
+                </div>
+            </div>
+
+            <div class="nft-card" data-target="text3">
+                <div class="tier-gold">
+                    <img src="image3.png" alt="Saxophon (Bekannter Musiker)">
+                </div>
+                <div class="nft-card-content">
+                    <div class="nft-tier">Bekannte Musiker (Gold)</div>
+                    <div class="nft-relationship">Beziehung: Bester Freund (Blau)</div>
+                    <p class="nft-description">Ein bekannter Musiker, dessen Instrument ihm wie ein vertrauter Weggefährte zur Seite steht.</p>
+                </div>
+                <div class="hidden-text" id="text3">
+                    Hier wird die enge Vertrautheit spürbar: Das Instrument ist nicht nur Werkzeug, sondern inspirierender Dialogpartner.
+                </div>
+            </div>
+
+            <div class="nft-card" data-target="text4">
+                <div class="tier-rainbow">
+                    <img src="image4.png" alt="E-Gitarre (Superstar)">
+                </div>
+                <div class="nft-card-content">
+                    <div class="nft-tier">Superstar (Regenbogen)</div>
+                    <div class="nft-relationship">Beziehung: Lebenspartner (Rot)</div>
+                    <p class="nft-description">Ein Superstar, dessen Instrument eine lebenslange Partnerschaft darstellt, untrennbar von seiner Identität.</p>
+                </div>
+                <div class="hidden-text" id="text4">
+                    Ein Klick öffnet die Tür zu persönlichen Audio-Tagebüchern und unveröffentlichten Kompositionen, in denen Musiker und Instrument völlig verschmelzen.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © DAO-Projekt – Musiker & Instrumente
+    </footer>
+
+    <script>
+        // Einfaches JavaScript, um den versteckten Text beim Klicken auf eine Karte anzuzeigen oder auszublenden.
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.nft-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const targetId = card.getAttribute('data-target');
+                    const hiddenText = document.getElementById(targetId);
+                    if (hiddenText.style.display === 'block') {
+                        hiddenText.style.display = 'none';
+                    } else {
+                        hiddenText.style.display = 'block';
+                    }
+                });
+            });
+
+            // Beim Klicken auf den Titel "Funktionen der NFTs" neue Seite öffnen
+            const funktionenTitle = document.getElementById('funktionen');
+            funktionenTitle.addEventListener('click', function() {
+                window.open('philosophie.html', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
